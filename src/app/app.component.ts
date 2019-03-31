@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Curso de Angular';
+  title:string = 'Curso Angular';
+  active = false;
+  name:string = '';
+  lastName:string = '';
+
+  constructor() {
+    setTimeout(() => {
+      this.active = true;
+    }, 3000);
+  }
+
+  onClick() {
+    alert('Has hecho click!');
+  }
 }
