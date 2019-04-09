@@ -1,0 +1,18 @@
+<div class="row pl-4 pr-4">
+  <div class="col-12">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a  routerLink="/about">About</a></li>
+          <li class="breadcrumb-item">{{ framework.name }}</li>
+        </ol>
+      </nav>
+      
+      <h1>{{ framework.name }}</h1>
+      <hr>
+      <p><span class="font-weight-bold">Level: </span>{{ framework.level }}</p>
+      <p><span class="font-weight-bold">Description: </span>{{ framework.description }}</p>
+  </div>
+  <div class="col-12">
+    <button type="button" class="btn btn-outline-secondary" routerLink="/about/{{ framework.id }}/edit" [queryParams]="{}">Edit</button>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="row pl-4 pr-4">
+    <div class="col-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/about/create">Create</a></li>
+          </ol>
+        </nav>
+    </div>
+  </div>
+
+<div class="row pl-4 pr-4">
+  <div class="col-12">
+      <ul class="list-group">
+        <ng-container *ngFor="let framework of frameworks">
+          <a routerLink="/about/{{ framework.id }}">
+              <li class="list-group-item" *ngIf="framework.active">{{ framework.name }}</li>
+          </a>
+        </ng-container>
+      </ul>
+  </div>
+</div>
