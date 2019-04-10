@@ -25,7 +25,7 @@ export class FrameworksService {
       //HTTP
       const headers = new HttpHeaders({"Content-Type":"application/json"});
       return this.http.post(
-        this.DB+'/framework.json',
+        this.DB+'/frameworks.json',
         framework,
         { headers }
       ).subscribe();
