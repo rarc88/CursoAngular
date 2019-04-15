@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 offset-md-4 card bg-light p-4">
+      <form>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password" [(ngModel)]="password">
+        </div>
+        <button type="submit" class="btn btn-primary float-right" (click)="signin()">Signin</button>
+      </form>
+    </div>
+  </div>
+</div>

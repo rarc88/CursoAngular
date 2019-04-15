@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -18,8 +19,9 @@ import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
 import { FrameworksService } from './services/frameworks.service';
 import { CreateComponent } from './create/create.component';
-import { HttpClientModule } from '@angular/common/http';
 import { LinkifystrPipe } from './pipes/linkifystr.pipe';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { LinkifystrPipe } from './pipes/linkifystr.pipe';
     HomeComponent,
     DetailComponent,
     CreateComponent,
-    LinkifystrPipe
+    LinkifystrPipe,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
