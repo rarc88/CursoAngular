@@ -17,7 +17,7 @@ export class CreateComponent implements OnInit {
     this.id = this.id = this.route.snapshot.params['id'] || null;
     if(this.id) {
       frameworkService.getFramework(this.id)
-        .valueChanges()
+        //.valueChanges()
         .subscribe(framework => {
           this.framework = framework;
         });

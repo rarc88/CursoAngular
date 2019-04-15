@@ -13,9 +13,15 @@ export class AboutComponent implements OnInit {
 
   constructor(private frameworksService: FrameworksService) {
     frameworksService.getFrameworks()
-      .valueChanges()
+      //.valueChanges()
       .subscribe(frameworks => {
-        this.frameworks = frameworks;
+        this.frameworks = Object.keys(frameworks).map((key) => {
+          return {...frameworks[key], key: key};
+        })
+        //this.frameworks = Object.values(frameworks);
+        //this.frameworks = frameworks;
+      }, error => {
+        alert(`Error: ${error.status}`)
       });
   }
 

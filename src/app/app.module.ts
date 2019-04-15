@@ -19,6 +19,7 @@ import { DetailComponent } from './detail/detail.component';
 import { FrameworksService } from './services/frameworks.service';
 import { CreateComponent } from './create/create.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LinkifystrPipe } from './pipes/linkifystr.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     HomeComponent,
     DetailComponent,
-    CreateComponent
+    CreateComponent,
+    LinkifystrPipe
   ],
   imports: [
     BrowserModule,

@@ -12,9 +12,14 @@
   <div class="col">
       <ul class="list-group">
         <ng-container *ngFor="let framework of frameworks">
-          <a routerLink="/about/{{ framework.id }}">
-              <li class="list-group-item" *ngIf="framework.active">{{ framework.name }}</li>
-          </a>
+            <li class="list-group-item" *ngIf="framework.active">
+              <a routerLink="/about/{{ framework.key }}">
+                {{ framework.name | uppercase }}
+              </a>
+              <br>
+              <small>Creado: {{ framework.id | date: 'medium' | uppercase }}</small>
+              <p [innerHtml]="framework.description | linkifystr"></p>
+            </li>
         </ng-container>
       </ul>
   </div>

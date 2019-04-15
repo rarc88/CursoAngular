@@ -13,11 +13,13 @@ export class FrameworksService {
   constructor(private db:AngularFireDatabase, private http: HttpClient) { }
 
   public getFrameworks() {
-    return this.db.list('frameworks/');
+    return this.http.get(this.DB+'/frameworks.json');
+    //return this.db.list('frameworks/');
   }
 
   public getFramework(id:number) {
-    return this.db.object('frameworks/'+id);
+    return this.http.get(this.DB+'/frameworks/'+id+'.json');
+    //return this.db.object('frameworks/'+id);
   }
 
   public createFramework(framework:any) {

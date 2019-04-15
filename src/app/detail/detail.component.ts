@@ -15,7 +15,7 @@ export class DetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private frameworkService: FrameworksService) {
     this.id = this.route.snapshot.params['id'];
     frameworkService.getFramework(this.id)
-      .valueChanges()
+      //.valueChanges()
       .subscribe(framework => {
         this.framework = framework;
       });
